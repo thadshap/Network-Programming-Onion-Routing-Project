@@ -24,7 +24,7 @@ public class Node implements Runnable {
             DatagramPacket datagramPacketReceive = new DatagramPacket(buffer, 0, buffer.length);
             nodeSocket.receive(datagramPacketReceive);
 
-            String message = new String(datagramPacketReceive.getData(), StandardCharsets.UTF_8).trim(); //TODO Decrypt
+            String message = new String(datagramPacketReceive.getData(), StandardCharsets.UTF_8).trim(); // Decrypt
             System.out.println("Node with port nr. " + portCurrent + " received message " + message);
             String decryptedMessage = crypt.decrypt(message);
 
@@ -40,7 +40,7 @@ public class Node implements Runnable {
             DatagramPacket datagramPacketReceiveResponse = new DatagramPacket(buffer, 0, buffer.length);
             nodeSocket.receive(datagramPacketReceiveResponse);
 
-            message = new String(datagramPacketReceiveResponse.getData(), StandardCharsets.UTF_8).trim(); //TODO Encrypt
+            message = new String(datagramPacketReceiveResponse.getData(), StandardCharsets.UTF_8).trim(); // Encrypt
             String encryptedMessage = crypt.encrypt(message);
 
             DatagramPacket datagramPacketSendPortFrom = new DatagramPacket(
