@@ -11,15 +11,20 @@ public class Server implements Runnable {
 
     @Override
     public void run() {
-        byte[] buffer = new byte[100];
+        byte[] buffer = new byte[Client.BUFFER_SIZE];
 
         try (DatagramSocket serverSocket = new DatagramSocket(nodePort)) {
             DatagramPacket datagramPacketReceive = new DatagramPacket(buffer, 0, buffer.length);
             serverSocket.receive(datagramPacketReceive);
             String result = new String(datagramPacketReceive.getData(), StandardCharsets.UTF_8).trim();
             System.out.println("SERVER: " + result);
+            URL url = new URL(result);
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+            con.setRequestMethod("GET");
+            int status = con.getResponseCode();
+            con.disconnect();
 
-            String response = "Success";
+            String response = ""+status;
             System.out.println("Reached server");
             DatagramPacket datagramPacketSendPortTo = new DatagramPacket(
                     response.getBytes(),

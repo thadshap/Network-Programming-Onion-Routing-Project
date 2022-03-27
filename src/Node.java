@@ -19,7 +19,7 @@ public class Node implements Runnable {
     @Override
     public void run() {
         try (DatagramSocket nodeSocket = new DatagramSocket(portCurrent)) {
-            byte[] buffer = new byte[100];
+            byte[] buffer = new byte[Client.BUFFER_SIZE];
 
             DatagramPacket datagramPacketReceive = new DatagramPacket(buffer, 0, buffer.length);
             nodeSocket.receive(datagramPacketReceive);
@@ -36,7 +36,7 @@ public class Node implements Runnable {
             );
             nodeSocket.send(datagramPacketSendPortTo);
 
-            buffer = new byte[100];
+            buffer = new byte[Client.BUFFER_SIZE];
             DatagramPacket datagramPacketReceiveResponse = new DatagramPacket(buffer, 0, buffer.length);
             nodeSocket.receive(datagramPacketReceiveResponse);
 

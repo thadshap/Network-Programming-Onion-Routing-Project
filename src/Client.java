@@ -3,7 +3,7 @@ import java.net.*;
 import java.nio.charset.StandardCharsets;
 
 public class Client implements Runnable{
-
+    public static final int BUFFER_SIZE = 576;
     private final int clientPort;
     private final int portTo;
     private String message;
@@ -40,7 +40,7 @@ public class Client implements Runnable{
             //System.out.println(new String(datagramPacketSendPortTo.getData(), StandardCharsets.UTF_8));
             clientSocket.send(datagramPacketSendPortTo);
 
-            byte[] buffer = new byte[100];
+            byte[] buffer = new byte[BUFFER_SIZE];
 
             DatagramPacket datagramPacketReceive = new DatagramPacket(buffer, 0, buffer.length);
             clientSocket.receive(datagramPacketReceive);

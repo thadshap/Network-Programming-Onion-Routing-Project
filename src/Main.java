@@ -17,7 +17,7 @@ public class Main {
         node2Crypt.setReceiverPublicKey(node3Crypt.getPublickey());
         node3Crypt.setReceiverPublicKey(node1Crypt.getPublickey());
 
-        Client client = new Client(clientPort,node1Port,node1Crypt,node2Crypt,node3Crypt,"HEI");
+        Client client = new Client(clientPort,node1Port,node1Crypt,node2Crypt,node3Crypt,"http://example.com");
         Node node1 = new Node(node1Port,node2Port, node1Crypt);
         Node node2 = new Node(node2Port,node3Port, node2Crypt);
         Node node3 = new Node(node3Port,serverPort, node3Crypt);
