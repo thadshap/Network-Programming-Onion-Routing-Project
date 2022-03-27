@@ -25,7 +25,7 @@ public class Node implements Runnable {
             nodeSocket.receive(datagramPacketReceive);
 
             String message = new String(datagramPacketReceive.getData(), StandardCharsets.UTF_8).trim(); //TODO Decrypt
-            System.out.println("Node with port nr. " + portCurrent + "received message " + message);
+            System.out.println("Node with port nr. " + portCurrent + " received message " + message);
             String decryptedMessage = crypt.decrypt(message);
 
             DatagramPacket datagramPacketSendPortTo = new DatagramPacket(

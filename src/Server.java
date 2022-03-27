@@ -18,7 +18,7 @@ public class Server implements Runnable {
             serverSocket.receive(datagramPacketReceive);
             String result = new String(datagramPacketReceive.getData(), StandardCharsets.UTF_8).trim();
             System.out.println("SERVER: " + result);
-            //TODO Execute GET Request and claim Response
+
             String response = "Success";
             System.out.println("Reached server");
             DatagramPacket datagramPacketSendPortTo = new DatagramPacket(
