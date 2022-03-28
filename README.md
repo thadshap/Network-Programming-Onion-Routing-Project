@@ -54,7 +54,7 @@ Oppbyggingen av dette prosjektet har blitt utført i tre deler. Dere kan se at u
     Dette kan gjøre ved å skrive: 
     ```
     cd (path) // ex. cd /Users/Thadsha/Nettverksprogrammering/Programmering 
-    ´´´   
+    ```   
     For å klone skriver du:
      
     HTTPS:
