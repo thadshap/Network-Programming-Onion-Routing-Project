@@ -1,6 +1,6 @@
 # Network-Programming-Onion-Routing-Project
 
-Dette prosjektet er et forsøk på å implementere Onion Routing. Ut i fra min forståelse er Onion Routung (...). Prosjektet har blitt løst ut i fra dette.  
+Dette prosjektet er et forsøk på å implementere Onion Routing. Ut i fra min forståelse gjøres Onion routing delen av nodene, encrypt og decrypt. Fremfor at brukeren/klienten aksesserer en webside direkte, tar han veien gjennom nodene (hvor selve informasjonen/dataen er kamuflert) før han kommer til serveren som gjør den faktiske GET requesten. Responsen derfra blir så sendt tilbake til klienten som etterspurte requesten. Dette tillater en bruker å fysisk være på et annet sted enn der requesten blir eksekvert, aka VPN. Onion routingen forsikrer klienten om at informasjonen som passerer nodene er kryptert og umulig for hackere å lese med mindre de har tilgang til algoritmen klienten brukte for å enkryptere. Prosjektet har blitt løst ut i fra dette. 
            
 ### Implementert funksjonalitet
 Oppbyggingen av dette prosjektet har blitt utført i tre deler. Dere kan se at under "branches" følgende inndelinger; feature-node-setup, feature-encrypt-decrypt og feature-http-connection. Feature-node-setup tar for seg funsjonaliteten av oppsettningen på tjeneren, klienten og det viktigste som er nodene. Videre, har vi feature-encrypt-decrypt hvor det blir omplementert funksjonalitetene for enkryptering, dekryptering og generering av nøkkler for å ta i bruk i krypteringa. Tilslutt står igjen feature-http-connection som har ansvar for oppkoblings funksjonaliteten mot en http URL.
@@ -73,7 +73,7 @@ Oppbyggingen av dette prosjektet har blitt utført i tre deler. Dere kan se at u
 ### Instruksjoner for å bruke løsningen
  1. Gå inn på Main.java
  2. På den øverste linja i koden kan man legge til den http nettsiden man ønsker å gå inn på gjennom onion routing
- 3. Så kan koden kjøres ved å trykke på den grønne "play"-knappen til venstre for initialiseringen av main metoden eller initialiseringen av Main klassen. Hvis du ikke finner disse knappene så kan du høyereklikke hvor som helt inne på klassen og trykke på " Run 'Main.main()' ".
+ 3. Så kan koden kjøres ved å trykke på den grønne "play"-knappen til venstre for initialiseringen av main metoden eller initialiseringen av Main klassen. Hvis du ikke finner disse knappene så kan du høyereklikke hvor som helt inne på klassen og trykke på Run 'Main.main()'.
  4. Hvis dette funket så skal du få dette opp under Run-terminalen:
     ```
     CLIENT: sends http://example.com
@@ -94,11 +94,9 @@ Oppbyggingen av dette prosjektet har blitt utført i tre deler. Dere kan se at u
     https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/util/concurrent/ExecutorService.html
     
     
-   ##### Ekstra lenker 
-     https://stackoverflow.com/questions/21081713/diffie-hellman-key-exchange-in-java 
-     https://github.com/dangeabunea/RomanianCoderExamples/blob/master/UdpUnicastSimple/src/romaniancoder/networking/udp/unicast/simple/Main.java 
+### Ekstra lenker 
+    https://stackoverflow.com/questions/21081713/diffie-hellman-key-exchange-in-java 
+    https://github.com/dangeabunea/RomanianCoderExamples/blob/master/UdpUnicastSimple/src/romaniancoder/networking/udp/unicast/simple/Main.java 
      
-     
-                                                            Laget av Thadshajini Paramsothy
-                                                              E-post: thadsha1710@live.no
-
+### Forfatter
+Thadshajini Paramsothy
