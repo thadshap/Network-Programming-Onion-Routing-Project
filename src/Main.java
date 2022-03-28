@@ -3,6 +3,7 @@ import java.util.concurrent.Executors;
 
 public class Main {
     public static void main(String[] args) {
+        String message = "http://example.com";
         int clientPort = 50000;
         int node1Port = 50001;
         int node2Port = 50002;
@@ -17,7 +18,7 @@ public class Main {
         node2Crypt.setReceiverPublicKey(node3Crypt.getPublickey());
         node3Crypt.setReceiverPublicKey(node1Crypt.getPublickey());
 
-        Client client = new Client(clientPort,node1Port,node1Crypt,node2Crypt,node3Crypt,"http://example.com");
+        Client client = new Client(clientPort,node1Port,node1Crypt,node2Crypt,node3Crypt,message);
         Node node1 = new Node(node1Port,node2Port, node1Crypt);
         Node node2 = new Node(node2Port,node3Port, node2Crypt);
         Node node3 = new Node(node3Port,serverPort, node3Crypt);
@@ -29,14 +30,16 @@ public class Main {
         ExecutorService executorServiceNode3 = Executors.newFixedThreadPool(1);
         ExecutorService executorServiceServer = Executors.newFixedThreadPool(1);
 
-        System.out.println("Main start");
-
         executorServiceClient.submit(client);
         executorServiceNode1.submit(node1);
         executorServiceNode2.submit(node2);
         executorServiceNode3.submit(node3);
         executorServiceServer.submit(server);
 
-        System.out.println("Main end");
+        executorServiceClient.shutdown();
+        executorServiceNode1.shutdown();
+        executorServiceNode2.shutdown();
+        executorServiceNode3.shutdown();
+        executorServiceServer.shutdown();
     }
 }

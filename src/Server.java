@@ -17,7 +17,7 @@ public class Server implements Runnable {
             DatagramPacket datagramPacketReceive = new DatagramPacket(buffer, 0, buffer.length);
             serverSocket.receive(datagramPacketReceive);
             String result = new String(datagramPacketReceive.getData(), StandardCharsets.UTF_8).trim();
-            System.out.println("SERVER: " + result);
+            System.out.println("SERVER receives: " + result);
             URL url = new URL(result);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
@@ -25,7 +25,6 @@ public class Server implements Runnable {
             con.disconnect();
 
             String response = ""+status;
-            System.out.println("Reached server");
             DatagramPacket datagramPacketSendPortTo = new DatagramPacket(
                     response.getBytes(),
                     response.length(),

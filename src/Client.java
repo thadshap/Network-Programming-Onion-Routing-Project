@@ -50,7 +50,7 @@ public class Client implements Runnable{
             String dec2= node2Crypt.decrypt(dec1);
             String dec3 = node3Crypt.decrypt(dec2);
 
-            System.out.println("CLIENT: received response code" + dec3);
+            System.out.println("CLIENT: received HTTP-response code " + dec3);
 
         } catch (SocketException e) {
             e.printStackTrace();
