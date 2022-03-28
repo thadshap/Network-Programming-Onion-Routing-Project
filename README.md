@@ -57,6 +57,7 @@ Oppbyggingen av dette prosjektet har blitt utført i tre deler. Dere kan se unde
     cd (path) // ex. cd /Users/Thadsha/Nettverksprogrammering/Programmering 
     ```   
     For å klone skriver du:
+    
     HTTPS:
     ```
     git clone https://github.com/thadshap/Network-Programming-Onion-Routing-Project.git
