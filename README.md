@@ -54,11 +54,17 @@ Oppbyggingen av dette prosjektet har blitt utført i tre deler. Dere kan se at u
             Dette kan gjøre ved å skrive: 
             cd (veien til mappa)
         For å klone skriver du:
+     
     HTTPS:
+    ```
     git clone https://github.com/thadshap/Network-Programming-Onion-Routing-Project.git
+    ```
     
     SSH:
+    ```
     git clone git@github.com:thadshap/Network-Programming-Onion-Routing-Project.git 
+    ```
+    
 3. Åpne prosjektet i IntelliJ IDEA
          Hvis du ikke har IntelliJ IDEA kan du laste den ned ved hjelp av denne lenken:
              https://www.jetbrains.com/idea/ 
@@ -69,10 +75,11 @@ Oppbyggingen av dette prosjektet har blitt utført i tre deler. Dere kan se at u
  2. På den øverste linja i koden kan man legge til den http nettsiden man ønsker å gå inn på gjennom onion routing
  3. Så kan koden kjøres ved å trykke på den grønne "play"-knappen til venstre for initialiseringen av main metoden eller initialiseringen av Main klassen. Hvis du ikke finner disse knappene så kan du høyereklikke hvor som helt inne på klassen og trykke på " Run 'Main.main()' ".
  4. Hvis dette funket så skal du få dette opp under Run-terminalen:
+    ```
     CLIENT: sends http://example.com
     SERVER receives: http://example.com
     CLIENT: received HTTP-response code 200
-         
+    ```     
          
 ### Fremtidig arbeid med oversikt over nåværende mangler/svakheter
 - Gjøre om til Maven prosjekt
@@ -90,4 +97,8 @@ Oppbyggingen av dette prosjektet har blitt utført i tre deler. Dere kan se at u
    ##### Ekstra lenker 
      https://stackoverflow.com/questions/21081713/diffie-hellman-key-exchange-in-java 
      https://github.com/dangeabunea/RomanianCoderExamples/blob/master/UdpUnicastSimple/src/romaniancoder/networking/udp/unicast/simple/Main.java 
+     
+     
+                                                            Laget av Thadshajini Paramsothy
+                                                              E-post: thadsha1710@live.no
 
