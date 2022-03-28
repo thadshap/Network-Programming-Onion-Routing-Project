@@ -51,9 +51,11 @@ Oppbyggingen av dette prosjektet har blitt utført i tre deler. Dere kan se at u
         https://www.oracle.com/java/technologies/javase/jdk14-archive-downloads.html
 2. Klone prosjektet med enten SSH eller HTTPS
         Åpne terminalen og pass på at du står inn på den mappa du ønsker å klone prosjektet inn i
-            Dette kan gjøre ved å skrive: 
-            cd (veien til mappa)
-        For å klone skriver du:
+    Dette kan gjøre ved å skrive: 
+    ```
+    cd (path) // ex. cd /Users/Thadsha/Nettverksprogrammering/Programmering 
+    ´´´   
+    For å klone skriver du:
      
     HTTPS:
     ```
