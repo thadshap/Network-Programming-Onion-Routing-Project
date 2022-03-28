@@ -6,12 +6,6 @@ Dette prosjektet er et forsøk på å implementere Onion Routing. Ut i fra min f
 Oppbyggingen av dette prosjektet har blitt utført i tre deler. Dere kan se at under "branches" følgende inndelinger; feature-node-setup, feature-encrypt-decrypt og feature-http-connection. Feature-node-setup tar for seg funsjonaliteten av oppsettningen på tjeneren, klienten og det viktigste som er nodene. Videre, har vi feature-encrypt-decrypt hvor det blir omplementert funksjonalitetene for enkryptering, dekryptering og generering av nøkkler for å ta i bruk i krypteringa. Tilslutt står igjen feature-http-connection som har ansvar for oppkoblings funksjonaliteten mot en http URL.
 
 
-### Fremtidig arbeid med oversikt over nåværende mangler/svakheter
-- Gjøre om til Maven prosjekt
-- Skulle gjerne hatt med SSH for å komme seg inn på HTTPS lenker 
-- Skulle laget tester og kjørt continuous integration/deployment kjøring
-
-
 ### Eksterne avhengigheter med en kort beskrivelse av hver avhengighet og hva den er brukt til
     AESSecurityCap
         import javax.crypto.*;
@@ -60,10 +54,11 @@ Oppbyggingen av dette prosjektet har blitt utført i tre deler. Dere kan se at u
             Dette kan gjøre ved å skrive: 
             cd (veien til mappa)
         For å klone skriver du:
-            HTTPS:
-            git clone https://github.com/thadshap/Network-Programming-Onion-Routing-Project.git
-            SSH:
-            git clone git@github.com:thadshap/Network-Programming-Onion-Routing-Project.git 
+    HTTPS:
+    git clone https://github.com/thadshap/Network-Programming-Onion-Routing-Project.git
+    
+    SSH:
+    git clone git@github.com:thadshap/Network-Programming-Onion-Routing-Project.git 
 3. Åpne prosjektet i IntelliJ IDEA
          Hvis du ikke har IntelliJ IDEA kan du laste den ned ved hjelp av denne lenken:
              https://www.jetbrains.com/idea/ 
@@ -74,11 +69,17 @@ Oppbyggingen av dette prosjektet har blitt utført i tre deler. Dere kan se at u
  2. På den øverste linja i koden kan man legge til den http nettsiden man ønsker å gå inn på gjennom onion routing
  3. Så kan koden kjøres ved å trykke på den grønne "play"-knappen til venstre for initialiseringen av main metoden eller initialiseringen av Main klassen. Hvis du ikke finner disse knappene så kan du høyereklikke hvor som helt inne på klassen og trykke på " Run 'Main.main()' ".
  4. Hvis dette funket så skal du få dette opp under Run-terminalen:
-         CLIENT: sends http://example.com
-         SERVER receives: http://example.com
-         CLIENT: received HTTP-response code 200
+    CLIENT: sends http://example.com
+    SERVER receives: http://example.com
+    CLIENT: received HTTP-response code 200
          
          
+### Fremtidig arbeid med oversikt over nåværende mangler/svakheter
+- Gjøre om til Maven prosjekt
+- Skulle gjerne hatt med SSH for å komme seg inn på HTTPS lenker 
+- Skulle laget tester og kjørt continuous integration/deployment
+
+
 ### Eventuell lenke til API dokumentasjon
     https://download.java.net/java/GA/jdk14/docs/api/java.base/java/net/DatagramPacket.html#%3Cinit%3E(byte%5B%5D,int,java.net.InetAddress,int)
     https://download.java.net/java/GA/jdk14/docs/api/java.base/java/net/DatagramSocket.html#send(java.net.DatagramPacket)
