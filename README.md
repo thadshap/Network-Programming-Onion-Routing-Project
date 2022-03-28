@@ -122,14 +122,20 @@ Gjøre om til data fra Datapakken til String i for av UTF_8
 
 ## Eventuell lenke til API dokumentasjon
 https://download.java.net/java/GA/jdk14/docs/api/java.base/java/net/DatagramPacket.html#%3Cinit%3E(byte%5B%5D,int,java.net.InetAddress,int)
+
 https://download.java.net/java/GA/jdk14/docs/api/java.base/java/net/DatagramSocket.html#send(java.net.DatagramPacket)
+
 https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Runnable.html#run()
+
 https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/util/concurrent/ExecutorService.html
     
     
 ## Ekstra lenker 
+
 https://www.geeksforgeeks.org/onion-routing/
+
 https://stackoverflow.com/questions/21081713/diffie-hellman-key-exchange-in-java 
+
 https://github.com/dangeabunea/RomanianCoderExamples/blob/master/UdpUnicastSimple/src/romaniancoder/networking/udp/unicast/simple/Main.java 
      
 ## Forfatter
