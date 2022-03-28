@@ -67,8 +67,7 @@ Oppbyggingen av dette prosjektet har blitt utført i tre deler. Dere kan se unde
     git clone git@github.com:thadshap/Network-Programming-Onion-Routing-Project.git 
     ```
     
-3. Åpne prosjektet i IntelliJ IDEA
-         Hvis du ikke har IntelliJ IDEA kan du laste den ned ved hjelp av denne lenken:
+3. Åpne prosjektet i IntelliJ IDEA. Hvis du ikke har IntelliJ IDEA kan du laste den ned ved hjelp av denne lenken:
              https://www.jetbrains.com/idea/ 
              
              
